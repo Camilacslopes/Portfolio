@@ -13,6 +13,10 @@ html, body{
 
 }
 
+.parent{
+    display: flex;
+}
+
 .sidebar{
      
      width: 20%;
@@ -23,11 +27,47 @@ html, body{
 
 .sidebar-pos{
     position: absolute;
+    top: 5%;
+}
+
+
+.img-sidebar {
+    text-align: center;
 }
 
 .img-sidebar img{
-       width: 80%;
-       border: 4px solid #9050cc;
+       width: 60%;
+       border: 4px solid blueviolet;
        border-radius: 50%;
        
+}
+
+.menu {
+
+    margin:20px 0;
+    text-align: center;
+}
+
+.menu a{
+    color: white;
+    opacity: 0.4;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+
+}
+
+.menu a.selected{
+    opacity: 1;
+}
+
+.content{
+
+    position: absolute;
+    left: 20%;
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 3%;
 }
