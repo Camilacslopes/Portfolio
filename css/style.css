@@ -3,6 +3,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: 'Saira Extra Condensed', sans-serif;
 
 }
  
@@ -22,12 +23,16 @@ html, body{
      width: 20%;
      height: 100%;
      position: fixed;
-     background-color: rgb(106, 20, 192);
+     background-color: rgb(82, 24, 141);
+     top: 50%;
+     transform: translateY(-50%);
 }
 
 .sidebar-pos{
     position: absolute;
-    top: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 
@@ -37,7 +42,7 @@ html, body{
 
 .img-sidebar img{
        width: 60%;
-       border: 4px solid blueviolet;
+       border: 4px solid rgb(124, 37, 206);
        border-radius: 50%;
        
 }
@@ -70,4 +75,53 @@ html, body{
     height: 100%;
     overflow-y: auto;
     padding: 0 3%;
+}
+
+section.descricao{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+}
+
+section.descricao h2{
+
+      color: #343a40;
+      font-size: 46px;
+}
+
+section.descricao h2 > span{
+    color: blueviolet;
+
+}
+
+section.descricao h3{
+    margin: 8px 0;
+    color: #6c757d;
+    font-size: 26px;
+}
+
+section.descricao p{
+    color: #6c757d;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.icons-social {
+    margin-top: 20px;
+}
+
+.icons-social a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(51, 48, 48);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.icons-social{
+    line-height: 40px;
 }
