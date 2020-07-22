@@ -63,8 +63,8 @@ html, body{
 
 }
 
-.menu a.selected{
-    opacity: 1;
+.menu a.selected:hover{
+    color:white;
 }
 
 .content{
@@ -90,14 +90,14 @@ section.descricao h2{
 }
 
 section.descricao h2 > span{
-    color: blueviolet;
+    color:rgb(82, 24, 141);
 
 }
 
 section.descricao h3{
     margin: 8px 0;
     color: #6c757d;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 section.descricao p{
@@ -113,7 +113,7 @@ section.descricao p{
 .icons-social a{
     text-decoration: none;
     color: white;
-    background-color: rgb(51, 48, 48);
+    background-color: rgb(82, 76, 76);
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -124,4 +124,8 @@ section.descricao p{
 
 .icons-social{
     line-height: 40px;
+}
+
+.icons-social a:hover{
+    background-color: rgb(82, 24, 141);
 }
