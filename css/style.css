@@ -63,9 +63,6 @@ html, body{
 
 }
 
-.menu a.selected:hover{
-    color:white;
-}
 
 .content{
 
@@ -128,4 +125,8 @@ section.descricao p{
 
 .icons-social a:hover{
     background-color: rgb(82, 24, 141);
+}
+
+.menu a:hover{
+   color: white;
 }
