@@ -18,6 +18,16 @@ html, body{
     display: flex;
 }
 
+.content{
+
+    position: absolute;
+    left: 20%;
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 3%;
+}
+
 .sidebar{
      
      width: 20%;
@@ -35,6 +45,7 @@ html, body{
 
 }
 
+/* estilo do menu */
 
 .img-sidebar {
     text-align: center;
@@ -63,22 +74,20 @@ html, body{
 
 }
 
+.menu a:hover{
+    opacity: 1;
+ }
 
-.content{
 
-    position: absolute;
-    left: 20%;
-    width: 80%;
-    height: 100%;
-    overflow-y: auto;
-    padding: 0 3%;
-}
+
+/* estilos das seções */
 
 section.descricao{
       position: relative;
       top: 50%;
       transform: translateY(-50%);
 }
+
 
 section.descricao h2{
 
@@ -102,6 +111,7 @@ section.descricao p{
     font-size: 18px;
     margin-top: 40px;
 }
+
 
 .icons-social {
     margin-top: 20px;
@@ -127,6 +137,11 @@ section.descricao p{
     background-color: rgb(82, 24, 141);
 }
 
-.menu a:hover{
-   color: white;
+section.sobre{
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
 }
+
+
+
