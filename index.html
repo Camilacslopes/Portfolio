@@ -26,7 +26,7 @@
           <div class="menu">
             <a href= "#sobre">Sobre</a>
             <a href="#formacao">Formação Acadêmica</a>
-            <a href="#experiencia">Experiência</a>
+            <a href="#experiencia">Skills</a>
 
         </div><!--menu-->
       </div><!--sidebar-pos-->
@@ -36,11 +36,11 @@
 
     <div class="content">
         
-        <section class="descricao">
+        <section class="secao" id="sobre">
 
             <h2><span>Camila Lopes</span></h2>
             <h3> Web Developer Full Stack </h3>
-            <p>  São Paulo - Brazil<span> +55 (13) 99136-8424 </span></p>
+            <p>  São Paulo - Brazil<span> +55 13 99136-8424 </span></p>
             
 
          <div class="icons-social">
@@ -49,31 +49,60 @@
              <a href=""><i class="fas fa-envelope"></i></a>
 
          </div><!--icons-->
-         
+
+        
       
         </section>
 
-  
-               <section class="sobre">
-                 <p><a name="sobre">Skills</a></p>
 
-
-             </section>
+             
           
-          
-            <section class="formacao">
+            <section class="secao" id="formacao">
 
           </section>
         
-        
-        <section class="experiencia">
 
+          
+            <section class="secao" id="experiencia">
+          <p><a name="sobre">Skills</a></p>
         </section>
+
+        
         
     
       </div><!--content-->
     </div><!--parent-->  
-        
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        var _AlturaDocumento = $(window).height(); //pega altura da janela
+  
+      function AlturaSecao() {
+        $('.secao').height(_AlturaDocumento); //atribui o valor da variável a todas as divs com a classe secao
+      }
+  
+      function ScrollSecao() {
+       
+        var body = $('html, body');
+        if($(this).parent('.secao').is('#sobre')) {
+          //verifica se está na primeira seção e rola para a segunda
+          body.animate({scrollTop: _AlturaDocumento}, '500');
+        } else if ($(this).parent('.secao').is('#formacao')) {
+          //verifica se está na segunda seção e rola para a terceira
+          body.animate({scrollTop: _AlturaDocumento*2}, '500');
+        } else if ($(this).parent('.secao').is('#experiencia')) {
+          //verifica se está na terceira seção e rola para a quarta
+          body.animate({scrollTop: _AlturaDocumento*3}, '500');
+        } else {
+          //rola para o início da página
+          body.animate({scrollTop: 0}, '800');
+        }
+      }
+  
+      $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
+  
+      $(AlturaSecao); //chama a nossa função só depois que o documento estiver completamente carregado
+    </script>
 
     </body>
 </html>

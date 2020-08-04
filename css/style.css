@@ -82,31 +82,31 @@ html, body{
 
 /* estilos das seções */
 
-section.descricao{
+section#sobre{
       position: relative;
-      top: 50%;
+      top: 70%;
       transform: translateY(-50%);
 }
 
 
-section.descricao h2{
+section#sobre h2{
 
       color: #343a40;
       font-size: 46px;
 }
 
-section.descricao h2 > span{
+section#sobre h2 > span{
     color:rgb(82, 24, 141);
 
 }
 
-section.descricao h3{
+section#sobre h3{
     margin: 8px 0;
     color: #6c757d;
     font-size: 30px;
 }
 
-section.descricao p{
+section#sobre p{
     color: #6c757d;
     font-size: 18px;
     margin-top: 40px;
@@ -137,11 +137,34 @@ section.descricao p{
     background-color: rgb(82, 24, 141);
 }
 
-section.sobre{
+section#experiencia{
     position: relative;
-    top: 45%;
+    top: 55%;
     transform: translateY(-50%);
 }
 
+section#experiencia p{
+    color: #6c757d;
+    font-size: 30px;
+    margin-top: 40px;
+}
 
+.secao {
+    position: relative;
+  }
+
+  
+  .scroll {
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    position: relative;
+  }
+  .scroll-next {
+    transform: rotate(45deg);
+    margin: 14px 0 0 16.5px;
+  }
+  
 
