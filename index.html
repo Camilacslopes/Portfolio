@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/934cb3b9a6.js" crossorigin="anonymous"></script>
@@ -12,8 +14,14 @@
 
 </head>
 <body>
+
+  
+
     
     <div class="parent">
+      
+      
+
 
      <div class= "sidebar">
 
@@ -24,9 +32,9 @@
            </div><!--img-->
         
           <div class="menu">
-            <a href= "#sobre">Sobre</a>
             <a href="#formacao">Formação Acadêmica</a>
-            <a href="#experiencia">Skills</a>
+            <a href= "#skills">Skills</a>
+            <a href="#experiencia">Projetos</a>
 
         </div><!--menu-->
       </div><!--sidebar-pos-->
@@ -35,20 +43,26 @@
      
 
     <div class="content">
-        
+      
+        <a name="top"></a>
         <section class="secao" id="sobre">
+          
+          <img src="img/developer.jpg">
+
 
             <h2><span>Camila Lopes</span></h2>
             <h3> Web Developer Full Stack </h3>
             <p>  São Paulo - Brazil<span> +55 13 99136-8424 </span></p>
-            
+
 
          <div class="icons-social">
              <a href="https://www.linkedin.com/in/camila-lopes-a90511107/"><i class="fab fa-linkedin"></i></a>
              <a href="https://github.com/Camilacslopes"><i class="fab fa-github"></i></a>
-             <a href=""><i class="fas fa-envelope"></i></a>
+             <a href="mailto:camilacslopes@gmail.com"><i class="fas fa-envelope"></i></a>
+ 
 
          </div><!--icons-->
+
 
         
       
@@ -56,24 +70,43 @@
 
 
              
-          
-            <section class="secao" id="formacao">
+      
+        
+
+              <section class="secao" id="formacao">
+                <p><a name="formacao">Formação Acadêmica</a></p>
+
+
+
+            </section>
+            
+            <section class="secao" id="skills">
+              <p><a name="skills">Skills</a></p>
+              
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-bootstrap"></i>
+              <i class="fab fa-js"></i>
+              <i class="fab fa-node"></i>
+
 
           </section>
-        
 
           
             <section class="secao" id="experiencia">
-          <p><a name="sobre">Skills</a></p>
+          <p><a name="experiencia">Projetos</a></p>
         </section>
 
+        <button><a href="#top" id="myBtn"><i class="fas fa-angle-double-up"></i></a></button>
         
         
-    
       </div><!--content-->
     </div><!--parent-->  
     
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
+   
     <script>
         var _AlturaDocumento = $(window).height(); //pega altura da janela
   
@@ -84,10 +117,10 @@
       function ScrollSecao() {
        
         var body = $('html, body');
-        if($(this).parent('.secao').is('#sobre')) {
+        if($(this).parent('.secao').is('#formacao')) {
           //verifica se está na primeira seção e rola para a segunda
           body.animate({scrollTop: _AlturaDocumento}, '500');
-        } else if ($(this).parent('.secao').is('#formacao')) {
+        } else if ($(this).parent('.secao').is('#skills')) {
           //verifica se está na segunda seção e rola para a terceira
           body.animate({scrollTop: _AlturaDocumento*2}, '500');
         } else if ($(this).parent('.secao').is('#experiencia')) {
@@ -102,7 +135,10 @@
       $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
   
       $(AlturaSecao); //chama a nossa função só depois que o documento estiver completamente carregado
-    </script>
+
+    </script> 
+ 
+
 
     </body>
 </html>
