@@ -8,9 +8,14 @@
     
 
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/934cb3b9a6.js" crossorigin="anonymous"></script>
-    <title>Portfólio Front-End</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <title>Portfólio</title>
 
 </head>
 <body>
@@ -21,8 +26,6 @@
     <div class="parent">
       
       
-
-
      <div class= "sidebar">
 
       <div class="sidebar-pos">
@@ -32,6 +35,7 @@
            </div><!--img-->
         
           <div class="menu">
+            
             <a href="#formacao">Formação Acadêmica</a>
             <a href= "#skills">Skills</a>
             <a href="#experiencia">Projetos</a>
@@ -63,38 +67,59 @@
 
          </div><!--icons-->
 
-
-        
-      
         </section>
 
-
-             
-      
-        
-
               <section class="secao" id="formacao">
-                <p><a name="formacao">Formação Acadêmica</a></p>
+                     <h1><a name="formacao">Formação Acadêmica</a></h1>
+                     <br>
+                     <br>
+                    <ul>
+                   <li> Curso Desenvolvimento Web Full Stack - Digital House Brasil - 2020 </li>
+                  <li> Gradução e m Gestão Empresarial -  FATEC BAIXADA SANTISTA  - 2016  </li>
+                   
+                  </ul>
+                 <h2>Idiomas</h2>
+                 <br>
+                <ul>
+               <li> Inglês - Avançado</li>
+               <li> Espanhol - Básico</li>
+               <li> Francês - Básico</li>
 
-
-
+          </ul>
             </section>
             
             <section class="secao" id="skills">
               <p><a name="skills">Skills</a></p>
               
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-bootstrap"></i>
-              <i class="fab fa-js"></i>
-              <i class="fab fa-node"></i>
+           
+              <i class="fab fa-html5"></i>HTML        
+              <i class="fab fa-css3-alt"></i>CSS   
+              <i class="fab fa-bootstrap"></i>BOOTSTRAP 
+              <i class="fab fa-js"></i>JAVASCRIPT 
+              <br>     
+              <i class="fab fa-node"></i>NODEJS   
+              <i class="fas fa-database"></i>SQL-NOSQL
+              <i class="fab fa-figma"></i>FIGMA
+              <i class="fas fa-tasks"></i>METODOLOGIAS ÁGEIS
+      
 
 
           </section>
 
           
             <section class="secao" id="experiencia">
-          <p><a name="experiencia">Projetos</a></p>
+          <h1><a name="experiencia">Projetos</a></h1>
+          
+          <div class="wrapper">
+            <div class="carousel owl-carousel">
+              <div class="card card-1">A</div>
+              <div class="card card-2">B</div>
+              <div class="card card-3">C</div>
+              <div class="card card-4">D</div>
+              <div class="card card-5">E</div>
+            </div>
+          </div>
+      
         </section>
 
         <button><a href="#top" id="myBtn"><i class="fas fa-angle-double-up"></i></a></button>
@@ -103,41 +128,36 @@
       </div><!--content-->
     </div><!--parent-->  
     
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   
-   
-    <script>
-        var _AlturaDocumento = $(window).height(); //pega altura da janela
-  
-      function AlturaSecao() {
-        $('.secao').height(_AlturaDocumento); //atribui o valor da variável a todas as divs com a classe secao
-      }
-  
-      function ScrollSecao() {
-       
-        var body = $('html, body');
-        if($(this).parent('.secao').is('#formacao')) {
-          //verifica se está na primeira seção e rola para a segunda
-          body.animate({scrollTop: _AlturaDocumento}, '500');
-        } else if ($(this).parent('.secao').is('#skills')) {
-          //verifica se está na segunda seção e rola para a terceira
-          body.animate({scrollTop: _AlturaDocumento*2}, '500');
-        } else if ($(this).parent('.secao').is('#experiencia')) {
-          //verifica se está na terceira seção e rola para a quarta
-          body.animate({scrollTop: _AlturaDocumento*3}, '500');
-        } else {
-          //rola para o início da página
-          body.animate({scrollTop: 0}, '800');
-        }
-      }
-  
-      $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
-  
-      $(AlturaSecao); //chama a nossa função só depois que o documento estiver completamente carregado
 
-    </script> 
- 
+    <script>
+      $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items:1,
+            nav: false
+          },
+          600:{
+            items:2,
+            nav: false
+          },
+          1000:{
+            items:3,
+            nav: false
+          }
+        }
+      });
+    </script>
+
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+   
+    
 
 
     </body>
