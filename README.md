@@ -1,5 +1,6 @@
 
 **Portfolio Site**
+
 This is a simple portfolio site developed using only JavaScript, CSS and HTML. The goal of the site is to provide a platform to display and highlight personal projects and relevant skills.
 
 Technologies Used
